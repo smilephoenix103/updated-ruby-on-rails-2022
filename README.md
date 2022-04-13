@@ -1,4 +1,4 @@
-# Jerome's sample_app - Ruby on Rails Tutorial sample application
+# Jerome's sample_app - Ruby on Rails Tutorial sample application :wave:
 
 This application is an exercise in the context of the [*Ruby on Rails Tutorial*](https://www.railstutorial.org/)
 by [Michael Hartl](https://www.michaelhartl.com/) that I am currently following (April 2022) to practice coding.
@@ -6,7 +6,7 @@ by [Michael Hartl](https://www.michaelhartl.com/) that I am currently following 
 * Ruby version: ruby 3.0.3p157
 * Rails version: Rails 6.1.5
 
-*## Getting started
+## Getting started
 To get started with the app, clone the repo and then install the needed gems:
 ```
 $ bundle config set --local without 'production'
