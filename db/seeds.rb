@@ -12,7 +12,8 @@ puts 'START SEEDING'
 User.create!(name: 'Jérôme',
              email: 'jerome.Tan@tuta.io',
              password: '000000',
-             password_confirmation: '000000')
+             password_confirmation: '000000',
+             admin: true)
 
 # Create a main sample user.
 User.create!(name: 'Example User',
