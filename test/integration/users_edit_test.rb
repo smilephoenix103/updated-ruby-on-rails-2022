@@ -20,10 +20,10 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_select 'div.field_with_errors', count: 8
   end
 
-  test 'successful edit' do
-    log_in_as(@user)
+  test 'successful edit with friendly forwarding when initially unlogged user' do
     get edit_user_path(@user)
-    assert_template 'users/edit'
+    log_in_as(@user)
+    assert_redirected_to edit_user_path(@user)
     name = 'foo bar'
     email = 'bar@foo.com'
     patch user_path(@user), params: { user: { name: name,
@@ -36,4 +36,6 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal name, @user.name
     assert_equal email, @user.email
   end
+
+  test 'no friendly forwarding if several login attempts'
 end
