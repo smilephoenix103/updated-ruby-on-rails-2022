@@ -9,6 +9,8 @@ gem 'rails', '~> 6.1.5'
 gem 'bcrypt', '3.1.13'
 # Use bootstrap for CSS - front-end
 gem 'bootstrap-sass', '3.4.1'
+# Add Faker for seeding users
+gem 'faker', '>= 2.11.0'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
