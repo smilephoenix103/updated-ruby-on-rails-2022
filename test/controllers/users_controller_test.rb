@@ -4,6 +4,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:jerome)
+    @other_user = users(:kevin)
   end
   test "should get new user page" do
     get signup_path
@@ -21,5 +22,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
                                               email: @user.email } }
     assert_not flash.empty?
     assert_redirected_to login_url
+  end
+
+  test 'should redirect edit to home page if logged in as wrong user' do
+    log_in_as(@other_user)
+    get edit_user_path(@user)
+    assert flash.empty?
+    assert_redirected_to root_url
   end
 end
