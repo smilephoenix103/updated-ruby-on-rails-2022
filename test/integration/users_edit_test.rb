@@ -36,6 +36,4 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal name, @user.name
     assert_equal email, @user.email
   end
-
-  test 'no friendly forwarding if several login attempts'
 end
